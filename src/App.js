@@ -34,16 +34,32 @@ function App() {
           loader={<div>Loading...</div>}
         />
       </Route>
-      <Route path="/" element={<Nav />}>
+      <Route path="/" element={<Nav />} loader={<div>Loading...</div>}>
         <Route
           path="dashboard"
           element={<Dashboard />}
           loader={<div>Loading...</div>}
         />
-        <Route path="add-product" element={<AddProduct />} />
-        <Route path="add-customer" element={<AddCustomer />} />
-        <Route path="product-list" element={<ProductList />} />
-        <Route path="customer-list" element={<CustomerList />} />
+        <Route
+          path="add-product"
+          element={<AddProduct />}
+          loader={<div>Loading...</div>}
+        />
+        <Route
+          path="add-customer"
+          element={<AddCustomer />}
+          loader={<div>Loading...</div>}
+        />
+        <Route
+          path="product-list"
+          element={<ProductList />}
+          loader={<div>Loading...</div>}
+        />
+        <Route
+          path="customer-list"
+          element={<CustomerList />}
+          loader={<div>Loading...</div>}
+        />
         <Route element={<NotFound />} path="*" />
       </Route>
       <Route element={<NotFound />} path="*" />

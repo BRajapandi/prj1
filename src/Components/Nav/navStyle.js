@@ -20,6 +20,7 @@ const Wrapped = styled.div`
       width: 30%;
     }
     .logout {
+      cursor: pointer;
       color: #074b8a;
       font-weight: 800;
       font-size: 16px;

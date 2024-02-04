@@ -41,6 +41,15 @@ function AddCustomer() {
             </div>
           </div>
         </div>
+        <div className="row align-items-center justify-content-center">
+          <div
+            className="col-4"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <button className="btn clear">Clear</button>
+            <button className="btn upload">Upload</button>
+          </div>
+        </div>
       </div>
     </Wrapped>
   );

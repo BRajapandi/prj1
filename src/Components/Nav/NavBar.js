@@ -1,4 +1,4 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import Wrapped from "./navStyle";
 import logo from "../../asserts/images/logo.jpeg";
 import { BsPersonFillAdd } from "react-icons/bs";
@@ -9,6 +9,7 @@ import { IoIosPeople } from "react-icons/io";
 
 function NavBar() {
   let { pathname } = useLocation();
+  let navigate = useNavigate();
 
   return (
     <Wrapped>
@@ -16,7 +17,7 @@ function NavBar() {
         <div className="imgWrapper">
           <img src={logo} alt="company logo" />
         </div>
-        <span className="logout">
+        <span className="logout" onClick={() => navigate("/")}>
           Logout&nbsp;
           <AiOutlineLogout />
         </span>
