@@ -21,13 +21,25 @@ function App() {
   }, []);
   return (
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<AuthWrapper />}>
-        <Route element={<Login />} path="" />
-        <Route element={<VerifyOtp />} path="verify-otp" />
-        <Route element={<ChangePin />} path="change-pin" />
+      <Route path="/" element={<AuthWrapper />} loader={<div>Loading...</div>}>
+        <Route element={<Login />} path="" loader={<div>Loading...</div>} />
+        <Route
+          element={<VerifyOtp />}
+          path="verify-otp"
+          loader={<div>Loading...</div>}
+        />
+        <Route
+          element={<ChangePin />}
+          path="change-pin"
+          loader={<div>Loading...</div>}
+        />
       </Route>
       <Route path="/" element={<Nav />}>
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route
+          path="dashboard"
+          element={<Dashboard />}
+          loader={<div>Loading...</div>}
+        />
         <Route path="add-product" element={<AddProduct />} />
         <Route path="add-customer" element={<AddCustomer />} />
         <Route path="product-list" element={<ProductList />} />
