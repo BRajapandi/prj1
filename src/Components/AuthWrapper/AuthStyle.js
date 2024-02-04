@@ -22,7 +22,9 @@ const Wrapped = styled.div`
       border-radius: 8px;
       box-shadow: 0px 0px 4px lightgray;
       .loginLeftCard {
+        overflow: hidden;
         .logoStyle img {
+          overflow: hidden;
           margin: 10px 0px 0px 0px;
           width: 40%;
           height: 20%;

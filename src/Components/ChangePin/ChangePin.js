@@ -18,8 +18,14 @@ function ChangePin() {
       <h3 className="changePinTitle" data-aos="fade-up">
         Change PIN
       </h3>
-      <span className="changePinSubTitle">Enter Your PIN To Continue</span>
-      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="200">
+      <span
+        className="changePinSubTitle"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        Enter Your PIN To Continue
+      </span>
+      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="300">
         <input
           type="text"
           className={`form-control ${
@@ -32,7 +38,7 @@ function ChangePin() {
         <label for="pin">PIN</label>
         <div class="invalid-feedback">{error.errMsg}</div>
       </div>
-      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="450">
         <input
           type="text"
           className={`form-control ${

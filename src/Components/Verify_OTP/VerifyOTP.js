@@ -13,8 +13,10 @@ function VerifyOTP() {
       <h3 className="forgotTitle" data-aos="fade-up">
         Forgot Password :(
       </h3>
-      <span className="forgotSubTitle">Enter OTP to Continue</span>
-      <div className="wrapperOtp">
+      <span className="forgotSubTitle" data-aos="fade-up" data-aos-delay="150">
+        Enter OTP to Continue
+      </span>
+      <div className="wrapperOtp" data-aos="fade-up" data-aos-delay="300">
         <OtpInput
           value={otp}
           inputStyle={{ height: "40px", width: "40px", margin: "0px 4px" }}
@@ -24,7 +26,7 @@ function VerifyOTP() {
           renderInput={(props) => <input {...props} />}
         />
       </div>
-      <div data-aos="fade-up" data-aos-delay="600">
+      <div data-aos="fade-up" data-aos-delay="450">
         <CutButton clickFunction={() => navigate("/change-pin")}>
           Verify
         </CutButton>

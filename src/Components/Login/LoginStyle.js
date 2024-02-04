@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import bg from "../../asserts/images/bg1.jpg";
 const Wrapper = styled.div`
+  overflow: hidden;
   .loginTitle {
     margin: 30px 0px 0px 0px;
     text-align: center;
@@ -12,6 +13,11 @@ const Wrapper = styled.div`
     font-weight: 600;
     text-align: center;
     margin-bottom: 30px;
+  }
+  .forgotstyle a {
+    text-decoration: none;
+    color: #074b8a;
+    border-bottom: 2px solid #074b8a;
   }
 `;
 export default Wrapper;

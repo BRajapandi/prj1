@@ -19,8 +19,10 @@ function Login() {
       <h3 className="loginTitle" data-aos="fade-up">
         Welcome Back :)
       </h3>
-      <span className="loginSubTitle">Login to continue</span>
-      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="200">
+      <span className="loginSubTitle" data-aos="fade-up" data-aos-delay="150">
+        Login to continue
+      </span>
+      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="300">
         <input
           type="email"
           className={`form-control ${
@@ -34,7 +36,7 @@ function Login() {
         <label for="emailId">Email address</label>
         <div class="invalid-feedback">{error.errMsg}</div>
       </div>
-      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="400">
+      <div class="form-floating mb-4" data-aos="fade-up" data-aos-delay="450">
         <input
           type="password"
           class={`form-control ${
@@ -53,7 +55,7 @@ function Login() {
           Login
         </CutButton>
       </div>
-      <div>
+      <div data-aos="fade-up" data-aos-delay="750" className="forgotstyle">
         <Link to="/verify-otp">Forgot Password ?</Link>
       </div>
     </Wrapper>

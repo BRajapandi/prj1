@@ -17,7 +17,7 @@ import ImageUploader from "./Components/ImageUploader/index";
 function App() {
   const location = useLocation();
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, offset: 0 });
   }, []);
   return (
     <Routes location={location} key={location.pathname}>
