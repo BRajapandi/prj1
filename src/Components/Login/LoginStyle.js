@@ -35,8 +35,6 @@ const Wrapper = styled.div`
     }
     .loginTitle {
       margin: 10px 0px 0px 0px;
-      text-align: center;
-      padding: 0px !important;
     }
   }
 `;

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Wrapped from "./ChangePinStyle";
 import CutButton from "../../asserts/button";
 import { useNavigate } from "react-router-dom";
+import logo from "../../asserts/images/logo.jpeg";
 
 const initalState = {
   pin: "",
@@ -14,7 +15,10 @@ function ChangePin() {
   let navigate = useNavigate();
 
   return (
-    <Wrapped className="col-5">
+    <Wrapped className="col-12 col-sm-5">
+      <div className="confirmLogo">
+        <img src={logo} alt="Company Logo" />
+      </div>
       <h3 className="changePinTitle" data-aos="fade-up">
         Change PIN
       </h3>
