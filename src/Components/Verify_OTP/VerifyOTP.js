@@ -1,6 +1,7 @@
 import CutButton from "../../asserts/button";
 import Wrapper from "./VerifyStyle";
 import OtpInput from "react-otp-input";
+import logo from "../../asserts/images/logo.jpeg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +10,8 @@ function VerifyOTP() {
   let navigate = useNavigate();
 
   return (
-    <Wrapper className="col-5">
+    <Wrapper className="col-12 col-sm-5">
+      <img src={logo} alt="Company Logo" className="forgotLogo" />
       <h3 className="forgotTitle" data-aos="fade-up">
         Forgot Password :(
       </h3>

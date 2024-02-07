@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Wrapper from "./LoginStyle";
 import CutButton from "../../asserts/button/index";
-import LoginIcon from "../../asserts/svgs/LoginIcon";
 import logo from "../../asserts/images/logo.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -15,7 +14,10 @@ function Login() {
   let navigate = useNavigate();
 
   return (
-    <Wrapper className="col-5">
+    <Wrapper className="col-12 col-sm-5">
+      <div className="loginLogo">
+        <img src={logo} alt="Company Logo" />
+      </div>
       <h3 className="loginTitle" data-aos="fade-up">
         Welcome Back :)
       </h3>

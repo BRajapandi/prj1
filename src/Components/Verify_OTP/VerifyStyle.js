@@ -22,5 +22,20 @@ const Wrapper = styled.div`
     justify-content: center;
     margin-bottom: 25px;
   }
+  .forgotLogo {
+    display: none;
+  }
+  .forgotLogo {
+    display: none;
+  }
+  @media all and (max-width: 576px) {
+    .forgotLogo {
+      display: inline-block;
+      overflow: hidden;
+      margin: 10px 0px 0px 0px;
+      width: 32%;
+      height: 18%;
+    }
+  }
 `;
 export default Wrapper;

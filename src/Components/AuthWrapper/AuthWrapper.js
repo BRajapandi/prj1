@@ -7,7 +7,7 @@ function AuthWrapper() {
     <Wrapper>
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <div className="col-7 loginLeftCard">
+          <div className="col-12 col-sm-7 loginLeftCard">
             <div className="logoStyle">
               <img src={logo} alt="Company Name" />
             </div>

@@ -19,5 +19,25 @@ const Wrapper = styled.div`
     color: #074b8a;
     border-bottom: 2px solid #074b8a;
   }
+  .loginLogo {
+    display: none;
+  }
+  @media all and (max-width: 576px) {
+    .loginLogo {
+      display: block;
+      text-align: center;
+      img {
+        overflow: hidden;
+        margin: 10px 0px 0px 0px;
+        width: 50%;
+        height: 30%;
+      }
+    }
+    .loginTitle {
+      margin: 10px 0px 0px 0px;
+      text-align: center;
+      padding: 0px !important;
+    }
+  }
 `;
 export default Wrapper;

@@ -23,6 +23,7 @@ const Wrapped = styled.div`
       box-shadow: 0px 0px 4px lightgray;
       .loginLeftCard {
         overflow: hidden;
+        position: relative;
         .logoStyle img {
           overflow: hidden;
           margin: 10px 0px 0px 0px;
@@ -30,9 +31,39 @@ const Wrapped = styled.div`
           height: 20%;
         }
         .iconStyle svg {
-          position: relative;
-          height: 400px;
-          width: 450px;
+          position: absolute;
+          bottom: 20px;
+          height: 70%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 1024px) {
+    .container-fluid {
+      .loginLeftCard {
+        display: inline-block;
+      }
+      .row {
+        min-height: 60vh;
+        width: 80vw;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    .container-fluid {
+      .row {
+        min-height: 60vh;
+        width: 90vw;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .container-fluid {
+      .row {
+        .loginLeftCard {
+          display: none;
         }
       }
     }
