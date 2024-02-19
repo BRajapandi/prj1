@@ -29,8 +29,8 @@ const Wrapper = styled.div`
       img {
         overflow: hidden;
         margin: 10px 0px 0px 0px;
-        width: 50%;
-        height: 30%;
+        width: 140px;
+        height: 60px;
       }
     }
     .loginTitle {

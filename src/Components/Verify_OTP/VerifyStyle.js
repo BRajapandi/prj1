@@ -29,12 +29,13 @@ const Wrapper = styled.div`
     display: none;
   }
   @media all and (max-width: 576px) {
+    justify-content: flex-start;
     .forgotLogo {
       display: inline-block;
       overflow: hidden;
-      margin: 10px 0px 0px 0px;
-      width: 32%;
-      height: 18%;
+      margin: 20px 0px;
+      width: 140px;
+      height: 60px;
     }
   }
 `;
