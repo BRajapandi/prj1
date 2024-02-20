@@ -14,9 +14,9 @@ const Wrapped = styled.div`
     margin: 10px;
   }
   .ProductsImgUploader {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 160px));
+    gap: 20px;
   }
   .btn {
     padding: 6px 10px;
