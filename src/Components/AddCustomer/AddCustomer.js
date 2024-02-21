@@ -7,37 +7,37 @@ function AddCustomer() {
       <div className="container-fluid">
         <header>Add Customer</header>
         <div className="row">
-          <div class="col-12 col-sm-6 col-lg-4 mb-4">
-            <label for="Name" class="form-label">
+          <div className="col-12 col-sm-6 col-lg-4 mb-4">
+            <label htmlFor="Name" className="form-label">
               Name
             </label>
-            <input type="text" class="form-control" id="Name" />
-            <div class="valid-feedback">Looks good!</div>
+            <input type="text" className="form-control" id="Name" />
+            <div className="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4 mb-4">
-            <label for="userName" class="form-label">
+          <div className="col-12 col-sm-6 col-lg-4 mb-4">
+            <label htmlFor="userName" className="form-label">
               User Name
             </label>
-            <input type="text" class="form-control" id="userName" />
-            <div class="valid-feedback">Looks good!</div>
+            <input type="text" className="form-control" id="userName" />
+            <div className="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4 mb-4">
-            <label for="email" class="form-label">
+          <div className="col-12 col-sm-6 col-lg-4 mb-4">
+            <label htmlFor="email" className="form-label">
               Email ID
             </label>
-            <input type="text" class="form-control" id="email" />
-            <div class="valid-feedback">Looks good!</div>
+            <input type="text" className="form-control" id="email" />
+            <div className="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4 mb-4">
-            <label for="password" class="form-label">
+          <div className="col-12 col-sm-6 col-lg-4 mb-4">
+            <label htmlFor="password" className="form-label">
               Password
             </label>
             <div className="input-group">
-              <input type="password" class="form-control" id="password" />
-              <span class="input-group-text">
+              <input type="password" className="form-control" id="password" />
+              <span className="input-group-text">
                 <BsFillEyeSlashFill />
               </span>
-              <div class="valid-feedback">Looks good!</div>
+              <div className="valid-feedback">Looks good!</div>
             </div>
           </div>
         </div>
