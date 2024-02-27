@@ -34,12 +34,14 @@ function Login() {
       },
     })
       .then((e) => {
-        toast.warn("Wow so easy!");
+        toast.warn("Login successfully");
+        setTimeout(() => {
+          navigate("/add-product");
+        }, 1000);
       })
       .catch((e) => {
-        toast.error("Wow so easy!");
+        toast.error(e?.response?.data?.responseMsg);
       });
-    // navigate("/add-product");
   };
   return (
     <Wrapper className="col-12 col-sm-5">
