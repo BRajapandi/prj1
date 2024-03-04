@@ -22,7 +22,9 @@ function App() {
     Aos.init({ duration: 1000, offset: 0 });
   }, []);
   axios.defaults.baseURL = "http://ns6887.cms504.com:9090/api/v1";
-  axios.defaults.headers.common["Authorization"] = "token";
+  http: axios.defaults.headers.common[
+    "Authorization"
+  ] = `bearer ${localStorage.getItem("authToken")}`;
   return (
     <>
       <Routes location={location} key={location.pathname}>

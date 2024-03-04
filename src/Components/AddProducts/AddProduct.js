@@ -1,6 +1,44 @@
 import Wrapped from "./AddPrdStyle";
 import ImageUploader from "../ImageUploader/index";
+import axios from "axios";
+import AsyncSelect from "react-select/async";
+import { useEffect, useState } from "react";
+
 function AddProduct() {
+  const [parentCat, setParentCat] = useState([]);
+  const [allSubCat, setAllSubCat] = useState([]);
+  const [subCat, setSubCat] = useState([]);
+  const [Nodata, setNodata] = useState(null);
+  const [selectedParentCat, setSelectedParentCat] = useState({});
+  const [selectedSubCat, setSelectedSubCat] = useState({});
+
+  useEffect(() => {
+    CallCategoriesList();
+  }, []);
+  useEffect(() => {
+    console.log("setAllSubCat", allSubCat, selectedParentCat);
+    for (let data of allSubCat) {
+      if (data.categoryId == selectedParentCat.categoryId) {
+        setSubCat(data.list);
+      }
+    }
+  }, [selectedParentCat]);
+  const CallCategoriesList = async () => {
+    const res = await axios.get("/product/get-category-master");
+    const data = res.data.content;
+    setParentCat(data.categoryMasterList);
+    setAllSubCat(data.subCategoryList);
+  };
+  const ParentCatOptions = async (string, callback) => {
+    return parentCat;
+  };
+  const handleInputChange = (value) => {
+    if (value.length > 2) {
+      setNodata("No results found");
+    } else {
+      setNodata(null);
+    }
+  };
   return (
     <Wrapped>
       <div className="container-fluid">
@@ -17,14 +55,36 @@ function AddProduct() {
             <label for="Category" class="form-label">
               Category
             </label>
-            <input type="text" class="form-control" id="Category" />
+            <input type="hidden" class="form-control" id="Category" />
+            <AsyncSelect
+              loadOptions={ParentCatOptions}
+              value={selectedParentCat}
+              getOptionLabel={(e) => e.categoryName}
+              getOptionValue={(e) => e.categoryId}
+              defaultOptions={parentCat}
+              onChange={(e) => setSelectedParentCat(e)}
+              noOptionsMessage={() => Nodata}
+              onInputChange={handleInputChange}
+              placeholder="Category"
+            />
             <div class="valid-feedback">Looks good!</div>
           </div>
           <div class="col-12 col-sm-6 col-lg-4 mb-4">
             <label for="subCategory" class="form-label">
               Sub Category
             </label>
-            <input type="text" class="form-control" id="subCategory" />
+            <input type="hidden" class="form-control" id="subCategory" />
+            <AsyncSelect
+              loadOptions={subCat}
+              value={selectedSubCat}
+              getOptionLabel={(e) => e.subCategoryName}
+              getOptionValue={(e) => e.subCategoryId}
+              defaultOptions={subCat}
+              onChange={(e) => setSelectedSubCat(e)}
+              // noOptionsMessage={() => Nodata}
+              // onInputChange={handleInputChange}
+              placeholder="Category"
+            />
             <div class="valid-feedback">Looks good!</div>
           </div>
           <div class="col-12 col-sm-6 col-lg-4 mb-4">

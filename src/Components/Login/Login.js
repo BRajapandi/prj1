@@ -34,6 +34,10 @@ function Login() {
       },
     })
       .then((e) => {
+        let data = e.data.content;
+        localStorage.setItem("authToken", data.access_token);
+        localStorage.setItem("userDet", JSON.stringify(data.user));
+
         toast.warn("Login successfully");
         setTimeout(() => {
           navigate("/add-product");
