@@ -7,7 +7,6 @@ function Index(props) {
   const [images, setImages] = useState([]);
   const maxNumber = 69;
   const onChange = (imageList, addUpdateIndex) => {
-    // console.log(imageList, addUpdateIndex);
     props.handleChange({ imageList, addUpdateIndex });
     setImages(imageList);
   };

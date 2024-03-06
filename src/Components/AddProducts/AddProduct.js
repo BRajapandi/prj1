@@ -3,6 +3,7 @@ import ImageUploader from "../ImageUploader/index";
 import axios from "axios";
 import AsyncSelect from "react-select/async";
 import { useEffect, useState } from "react";
+import Uploader from "../../utils/uploader";
 
 function AddProduct() {
   const [parentCat, setParentCat] = useState([]);
@@ -37,6 +38,17 @@ function AddProduct() {
       setNodata("No results found");
     } else {
       setNodata(null);
+    }
+  };
+  const handleUploadImg = async (e, type) => {
+    if (e?.imageList[0]?.file) {
+      console.log("file", e?.imageList[0]?.file);
+      let data = await Uploader(e.imageList[0].file, "product");
+      if (type == "product") {
+        console.log("data1", data);
+      } else {
+        console.log("data2", data);
+      }
     }
   };
   return (
@@ -101,13 +113,20 @@ function AddProduct() {
             <input type="text" class="form-control" id="productType" />
             <div class="valid-feedback">Looks good!</div>
           </div>
+          <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <label for="productDesc" class="form-label">
+              Product Description
+            </label>
+            <input type="text" class="form-control" id="productDesc" />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
         </div>
         <div className="row ">
           <div className="col-12 col-lg-4 mb-4">
             <label>Product Image</label>
             <div>
               <ImageUploader
-                handleChange={(e) => console.log("handleChange", e)}
+                handleChange={(e) => handleUploadImg(e, "product")}
               />
             </div>
           </div>
@@ -115,15 +134,13 @@ function AddProduct() {
             <label>Product Sub-Image</label>
             <div className="ProductsImgUploader">
               <ImageUploader
-                handleChange={(e) => console.log("handleChange", e)}
+                handleChange={(e) => handleUploadImg(e, "subProduct")}
               />
-              {/* &nbsp;&nbsp;&nbsp; */}
               <ImageUploader
-                handleChange={(e) => console.log("handleChange", e)}
+                handleChange={(e) => handleUploadImg(e, "subProduct")}
               />
-              {/* &nbsp;&nbsp;&nbsp; */}
               <ImageUploader
-                handleChange={(e) => console.log("handleChange", e)}
+                handleChange={(e) => handleUploadImg(e, "subProduct")}
               />
             </div>
           </div>
